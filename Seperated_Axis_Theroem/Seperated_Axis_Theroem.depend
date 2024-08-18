@@ -1,0 +1,75 @@
+# depslib dependency file v1.0
+1679559964 source:h:\c++ projects\physics project\seperated_axis_theroem\main.cpp
+	<iostream>
+	"MyRenderer.h"
+	"vec2d.h"
+	"math.h"
+	"Shape.h"
+	"World.h"
+
+1674122869 h:\c++ projects\physics project\seperated_axis_theroem\myrenderer.h
+	<iostream>
+	<windows.h>
+
+1678387102 h:\c++ projects\physics project\seperated_axis_theroem\box.h
+	<iostream>
+	<vector>
+	<chrono>
+	"vec2d.h"
+
+1678529921 h:\c++ projects\physics project\seperated_axis_theroem\vec2d.h
+	<iostream>
+	<windows.h>
+	<math.h>
+	<vector>
+	<chrono>
+
+1679208454 h:\c++ projects\physics project\seperated_axis_theroem\shape.h
+	<iostream>
+	<vector>
+	<chrono>
+	"vec2d.h"
+
+1682435701 h:\c++ projects\physics project\seperated_axis_theroem\world.h
+	<iostream>
+	"vec2d.h"
+	"math.h"
+	"Shape.h"
+
+1679031415 h:\c++ projects\physics project\seperated_axis_theroem\cshape.h
+	<iostream>
+	<vector>
+	<chrono>
+	"vec2d.h"
+
+1715942822 source:h:\c++ projects\completeprojects\physics project\seperated_axis_theroem\main.cpp
+	<iostream>
+	"MyRenderer.h"
+	"vec2d.h"
+	"math.h"
+	"Shape.h"
+	"World.h"
+
+1674122869 h:\c++ projects\completeprojects\physics project\seperated_axis_theroem\myrenderer.h
+	<iostream>
+	<windows.h>
+
+1678529921 h:\c++ projects\completeprojects\physics project\seperated_axis_theroem\vec2d.h
+	<iostream>
+	<windows.h>
+	<math.h>
+	<vector>
+	<chrono>
+
+1679208454 h:\c++ projects\completeprojects\physics project\seperated_axis_theroem\shape.h
+	<iostream>
+	<vector>
+	<chrono>
+	"vec2d.h"
+
+1715936379 h:\c++ projects\completeprojects\physics project\seperated_axis_theroem\world.h
+	<iostream>
+	"vec2d.h"
+	"math.h"
+	"Shape.h"
+

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<FileVersion major="1" minor="0" />
+	<ActiveTarget name="Debug" />
+	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4117" topLine="12" />
+		</Cursor>
+		<Folding>
+			<Collapse line="17" />
+			<Collapse line="27" />
+			<Collapse line="37" />
+			<Collapse line="48" />
+			<Collapse line="60" />
+			<Collapse line="71" />
+			<Collapse line="88" />
+			<Collapse line="163" />
+		</Folding>
+	</File>
+	<File name="World.h" open="1" top="1" tabpos="2" split="0" active="1" splitpos="0" zoom_1="-2" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="10214" topLine="17" />
+		</Cursor>
+		<Folding>
+			<Collapse line="11" />
+			<Collapse line="23" />
+			<Collapse line="51" />
+			<Collapse line="117" />
+			<Collapse line="196" />
+			<Collapse line="271" />
+			<Collapse line="305" />
+		</Folding>
+	</File>
+	<File name="Shape.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="-2" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4332" topLine="13" />
+		</Cursor>
+		<Folding>
+			<Collapse line="10" />
+			<Collapse line="63" />
+			<Collapse line="115" />
+			<Collapse line="119" />
+			<Collapse line="134" />
+			<Collapse line="141" />
+			<Collapse line="254" />
+			<Collapse line="280" />
+			<Collapse line="292" />
+		</Folding>
+	</File>
+</CodeBlocks_layout_file>

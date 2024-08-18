@@ -1,0 +1,115 @@
+#include <iostream>
+#include "MyRenderer.h"
+#include "vec2d.h"
+#include "math.h"
+#include "Shape.h"
+#include "World.h"
+
+
+using namespace std;
+
+int screenwidth=256;
+int screenheight=240;
+auto tp1 = chrono::system_clock::now();
+
+
+
+
+
+
+
+
+
+
+int main()
+{
+        MyRenderer renderer;
+        renderer.CreateConsole(screenwidth,screenheight,2,2);
+
+        World Shape_World;
+
+
+
+
+
+        vec2d s8_pos(30,30);
+        vector<vec2d>vertS8{{-30,30} , {30,30}, {30,-30}, {-30,-30}};
+        Shape s8 = Shape(screenwidth/2,screenheight-10,vertS8,INT_MAX,0);
+
+        vector<vec2d>vertS9{{-30,30} , {30,30}, {30,-30}, {-30,-30}};
+        Shape s9 = Shape(100,100,vertS8,INT_MAX,0);
+
+        float d;
+        vec2d normal(0,0);
+
+
+        vector<vec2d> clip;
+
+
+
+
+
+    while(1){
+
+
+        auto tp2 = std::chrono::system_clock::now();
+        std::chrono::duration<float> elapsedTime = tp2 - tp1;
+        tp1 = tp2;
+        float fElapsedTime = elapsedTime.count();
+        renderer.Fill(0,0,screenwidth,screenheight,PIXEL_SOLID,FG_BLACK);
+
+
+
+        if(GetAsyncKeyState('W')){s8.position.y-=2;}
+        if(GetAsyncKeyState('A')){s8.position.x-=2;}
+        if(GetAsyncKeyState('S')){s8.position.y+=2;}
+        if(GetAsyncKeyState('D')){s8.position.x+=2;}
+        if(GetAsyncKeyState('F')){s8.angle+=0.1;}
+
+
+
+
+        s8.update_to_World_Space();
+        s9.update_to_World_Space();
+
+
+        bool isColliding = Solve_SAT(&s8,&s9,&d,&normal);
+
+
+
+
+        if(isColliding)
+        {
+            clip = Polygon_Clipping(&s8,&s9);
+        }
+
+
+
+
+       if(isColliding) renderer.DrawLine(s9.position.x,s9.position.y,s9.position.x+normal.x*d,s9.position.x+normal.y*dw,PIXEL_SOLID,FG_DARK_MAGENTA);
+       isColliding ?  DrawShape(s8,PIXEL_SOLID,FG_DARK_RED,renderer):DrawShape(s8,PIXEL_SOLID,FG_DARK_BLUE,renderer);
+       isColliding ?  DrawShape(s9,PIXEL_SOLID,FG_DARK_RED,renderer):DrawShape(s9,PIXEL_SOLID,FG_DARK_GREEN,renderer);
+
+
+         if(clip.size()>0)
+        {
+            for(int i=0;i<clip.size();i++)
+            {
+                renderer.DrawLine(clip[i].x,clip[i].y,clip[(i+1)%clip.size()].x,clip[(i+1)%clip.size()].y,PIXEL_SOLID,FG_DARK_YELLOW);
+                renderer.FillCircle(clip[i].x,clip[i].y,2,PIXEL_SOLID,FG_DARK_BLUE);
+            }
+        }
+
+        clip.clear();
+
+
+        renderer.WriteToBuffer();
+
+
+
+    }
+
+
+
+    return 0;
+}
